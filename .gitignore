@@ -1,0 +1,5 @@
+app/google-services.json
+**.iml
+!.gitignore
+.gradle/**
+.idea/*.xml
