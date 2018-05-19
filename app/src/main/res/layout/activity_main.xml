@@ -7,7 +7,7 @@
     tools:context=".Main">
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/search_bar"
         android:layout_width="234dp"
         android:layout_height="48dp"
         android:layout_marginEnd="13dp"
@@ -15,13 +15,13 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/filter_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Search..." />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/new_listing_button"
         android:layout_width="48dp"
         android:layout_height="45dp"
         android:layout_marginEnd="2dp"
@@ -32,46 +32,57 @@
         app:srcCompat="@drawable/ic_plus_circle" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/filter_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="?android:attr/selectableItemBackground"
         android:text="Filter"
-        app:layout_constraintStart_toEndOf="@+id/editText5"
+        app:layout_constraintStart_toEndOf="@+id/search_bar"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Filter" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/nav_chat_button"
         android:layout_width="95dp"
         android:layout_height="56dp"
         android:background="?android:attr/selectableItemBackground"
+        android:onClick="open_chat"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton13"
+        app:layout_constraintEnd_toStartOf="@+id/nav_profile_button"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton12"
+        app:layout_constraintStart_toEndOf="@+id/nav_listings_button"
         app:srcCompat="@drawable/ic_comments_bubble" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/nav_listings_button"
         android:layout_width="92dp"
-        android:layout_height="55dp"
+        android:layout_height="56dp"
         android:layout_marginStart="24dp"
         android:background="?android:attr/selectableItemBackground"
+        android:onClick="open_listings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_list" />
 
     <ImageButton
-        android:id="@+id/imageButton13"
+        android:id="@+id/nav_profile_button"
         android:layout_width="100dp"
-        android:layout_height="54dp"
+        android:layout_height="56dp"
         android:layout_marginEnd="24dp"
         android:background="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_user" />
+        app:srcCompat="@drawable/ic_user"
+        android:onClick="open_profile" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/nav_chat_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
