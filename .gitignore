@@ -3,3 +3,4 @@ app/google-services.json
 !.gitignore
 .gradle/**
 .idea/*.xml
+.DS_Store
